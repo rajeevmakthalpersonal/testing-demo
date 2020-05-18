@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="e3046fc1-8aaa-4480-927f-f57840415872" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<http:listener-config name="HTTP_Listener_config1" doc:name="HTTP Listener config" doc:id="1a845717-fca0-4037-9bea-f1c8a3986b4e" >
+		<http:listener-connection host="0.0.0.0" port="8082" />
+	</http:listener-config>
+	<global-property doc:name="Global Property" doc:id="dc295611-d9d6-4b11-911a-ea825076664b" name="mule.env" value="stage" />
+	<configuration-properties doc:name="Configuration properties" doc:id="d0cdfc47-e2a2-480c-8a61-a1e7149bf55e" file="${mule.env}.properties" />
+	<flow name="test-demo-rrm1Flow" doc:id="7cb09a88-227e-46a1-a405-563be45fa14b" >
+		<http:listener doc:name="Listener" doc:id="8ded1caf-921c-4219-948d-a45c5c2846a1" config-ref="HTTP_Listener_config1" path="/env"/>
+		<set-variable value="#[Mule::p('env')]" doc:name="env" doc:id="740bea9c-3e63-4129-9d76-02221396019a" variableName="env"/>
+		<set-payload value="#[vars.env]" doc:name="final paylaod" doc:id="0d505165-4fff-4c4c-8f12-109ed12d6821" mimeType="application/json"/>
+	</flow>
+</mule>
