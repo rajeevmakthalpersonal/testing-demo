@@ -33,7 +33,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
-						<muleVersion>4.1.4</muleVersion>
+						<muleVersion>4.3.0</muleVersion>
 						<username>ibmraj</username>
 						<password>Abcde!2345</password>
 						<environment>STAGE</environment>
