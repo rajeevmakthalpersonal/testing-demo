@@ -39,6 +39,7 @@
 						<password>Abcde!2345</password>
 						<environment>DEVELOPMENT</environment>
 						<applicationName>testing-demo</applicationName>
+						<businessGroup>IBM-BW GLOBAL</businessGroup>
 						<workers>1</workers>
 						<workerType>Micro</workerType>
 					</cloudHubDeployment>
