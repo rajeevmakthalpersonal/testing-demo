@@ -12,6 +12,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="test-demo-rrm1Flow" doc:id="7cb09a88-227e-46a1-a405-563be45fa14b" >
 		<http:listener doc:name="Git hub example" doc:id="8ded1caf-921c-4219-948d-a45c5c2846a1" config-ref="HTTP_Listener_config1" path="/env"/>
 		<set-variable value="#[Mule::p('env')]" doc:name="env1" doc:id="740bea9c-3e63-4129-9d76-02221396019a" variableName="env"/>
-		<set-payload value="#[vars.env]" doc:name="DEV is success" doc:id="0d505165-4fff-4c4c-8f12-109ed12d6821" mimeType="application/json"/>
+		<set-payload value="#[vars.env]" doc:name="Final" doc:id="0d505165-4fff-4c4c-8f12-109ed12d6821" mimeType="application/json"/>
 	</flow>
 </mule>
