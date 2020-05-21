@@ -33,10 +33,11 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.3.0</muleVersion>
 						<username>ibmraj</username>
 						<password>Abcde!2345</password>
-						<environment>STAGE</environment>
+						<environment>DEVELOPMENT</environment>
 						<applicationName>testing-demo</applicationName>
 						<workers>1</workers>
 						<workerType>Micro</workerType>
